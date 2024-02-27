@@ -3,18 +3,18 @@ from django.db import models
 # Create your models here.
 class Books(models.Model):
     tgl_cari = models.DateTimeField()
-    keyword = models.CharField()
+    keyword = models.CharField(max_length=200)
     url = models.URLField()
-    judul = models.CharField()
-    penulis = models.CharField()
-    penerbit = models.CharField()
-    isbn = models.CharField()
+    judul = models.CharField(max_length=200)
+    penulis = models.CharField(max_length=200)
+    penerbit = models.CharField(max_length=200)
+    isbn = models.CharField(max_length=200)
     tgl_terbit = models.DateField()
-    jumlah_halaman = models.CharField()
-    berat = models.CharField()
+    jumlah_halaman = models.CharField(max_length=200)
+    berat = models.CharField(max_length=200)
     img_source = models.URLField()
-    rating = models.CharField()
-    cover = models.CharField()
+    rating = models.CharField(max_length=200)
+    cover = models.CharField(max_length=200)
 
 
     created_at = models.DateTimeField(auto_now_add=True)
